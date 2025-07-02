@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ash | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #10131a;
+      color: #f5f5f5;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: url('https://via.placeholder.com/150') no-repeat center center/cover;
+      border: 3px solid #27b1ff;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover {
+      transform: scale(1.1);
+    }
+    h1 span {
+      color: #27b1ff;
+    }
+    .socials a {
+      margin: 0 0.5rem;
+      color: #27b1ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .skills {
+      margin-top: 3rem;
+    }
+    .skill {
+      margin-bottom: 1rem;
+    }
+    .skill p {
+      margin: 0;
+      font-weight: bold;
+    }
+    .bar {
+      background-color: #333;
+      height: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+    .bar div {
+      background: linear-gradient(to right, #27b1ff, #1f8edb);
+      height: 100%;
+      border-radius: 10px;
+    }
+    .projects {
+      margin-top: 3rem;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background-color: #1a1d26;
+      padding: 1.5rem;
+      border-radius: 12px;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    .project-card h4 {
+      margin: 0 0 0.5rem;
+      color: #27b1ff;
+    }
+    .project-desc {
+      opacity: 0;
+      max-height: 0;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    .project-card:hover .project-desc {
+      opacity: 1;
+      max-height: 200px;
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="intro">
+        <div class="profile-pic"></div>
+        <div class="intro-text">
+          <h1>Hi, I'm <span>Ash</span></h1>
+          <h2>Software Developer & Problem Solver</h2>
+          <p>I’m passionate about backend & algorithms. I build APIs, optimize performance, and craft solutions with clean code.</p>
+          <div class="socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="mailto:your@email.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="skills">
+      <h3>My Expertise</h3>
+      <div class="skill"><p>DSA (Problem Solving)</p><div class="bar"><div style="width: 65%"></div></div></div>
+      <div class="skill"><p>Spring Boot</p><div class="bar"><div style="width: 85%"></div></div></div>
+      <div class="skill"><p>SQL / MariaDB</p><div class="bar"><div style="width: 80%"></div></div></div>
+      <div class="skill"><p>REST APIs</p><div class="bar"><div style="width: 85%"></div></div></div>
+    </section>
+    <section class="projects">
+      <h3>My Projects</h3>
+      <div class="project-grid">
+        <div class="project-card">
+          <h4>Railway Reservation System (LLD)</h4>
+          <div class="project-desc">Seat booking, cancellation, and charting modules built with OOP design principles and Java collections.</div>
+        </div>
+        <div class="project-card">
+          <h4>Library Management System (LLD)</h4>
+          <div class="project-desc">A complete system with book inventory, member management, issue/return flow using classes and interfaces.</div>
+        </div>
+        <div class="project-card">
+          <h4>Cab Booking App (LLD)</h4>
+          <div class="project-desc">Simulates taxi allocations between points, distance-based fares, driver status tracking using modular OOP.</div>
+        </div>
+        <div class="project-card">
+          <h4>MiniBank Application</h4>
+          <div class="project-desc">CRUD-based Spring Boot project with RESTful APIs to manage account details, deposit/withdrawal logic, and MariaDB backend.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
