@@ -14,7 +14,7 @@
     }
     .container {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
     header {
@@ -32,7 +32,7 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background: url('https://via.placeholder.com/150') no-repeat center center/cover;
+      background: url('https://cdn-icons-png.flaticon.com/512/236/236831.png') no-repeat center center/cover;
       border: 3px solid #27b1ff;
       margin-bottom: 1rem;
       transition: transform 0.3s ease;
@@ -51,25 +51,28 @@
     }
     .skills {
       margin-top: 3rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .skill {
-      margin-bottom: 1rem;
-    }
-    .skill p {
-      margin: 0;
+    .circle-skill {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      position: relative;
+      background: conic-gradient(#27b1ff calc(var(--level) * 1%), #222 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: bold;
+      color: #f5f5f5;
+      flex-direction: column;
     }
-    .bar {
-      background-color: #333;
-      height: 12px;
-      border-radius: 10px;
-      overflow: hidden;
+    .circle-skill span {
+      font-size: 14px;
       margin-top: 5px;
-    }
-    .bar div {
-      background: linear-gradient(to right, #27b1ff, #1f8edb);
-      height: 100%;
-      border-radius: 10px;
+      text-align: center;
     }
     .projects {
       margin-top: 3rem;
@@ -82,37 +85,67 @@
     }
     .project-card {
       background-color: #1a1d26;
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: 12px;
-      position: relative;
-      cursor: pointer;
-      overflow: hidden;
       transition: transform 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
     }
     .project-card:hover {
       transform: scale(1.05);
     }
-    .project-card h4 {
-      margin: 0 0 0.5rem;
+    .project-desc {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .timeline {
+      position: relative;
+      margin: 4rem 0;
+      padding-left: 2rem;
+      border-left: 2px solid #555;
+    }
+    .timeline-entry {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #27b1ff;
+    }
+    .timeline-entry h4 {
+      margin: 0;
       color: #27b1ff;
     }
-    .project-desc {
-      opacity: 0;
-      max-height: 0;
-      transition: opacity 0.3s ease, max-height 0.3s ease;
-      color: #ccc;
-      font-size: 0.95rem;
+    .about-me {
+      background: #1a1d26;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 4rem;
+      text-align: center;
     }
-    .project-card:hover .project-desc {
-      opacity: 1;
-      max-height: 200px;
-      margin-top: 0.5rem;
+    .about-me p {
+      line-height: 1.6;
     }
-    @media (max-width: 600px) {
-      .intro {
-        flex-direction: column;
-        text-align: center;
-      }
+    .download-cv {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #27b1ff;
+      border-radius: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -122,7 +155,7 @@
       <div class="intro">
         <div class="profile-pic"></div>
         <div class="intro-text">
-          <h1>Hi, I'm <span>Ash</span></h1>
+          <h1>Hi, I'm <span>Skanda</span></h1>
           <h2>Software Developer & Problem Solver</h2>
           <p>I’m passionate about backend & algorithms. I build APIs, optimize performance, and craft solutions with clean code.</p>
           <div class="socials">
@@ -133,33 +166,56 @@
         </div>
       </div>
     </header>
+
     <section class="skills">
-      <h3>My Expertise</h3>
-      <div class="skill"><p>DSA (Problem Solving)</p><div class="bar"><div style="width: 65%"></div></div></div>
-      <div class="skill"><p>Spring Boot</p><div class="bar"><div style="width: 85%"></div></div></div>
-      <div class="skill"><p>SQL / MariaDB</p><div class="bar"><div style="width: 80%"></div></div></div>
-      <div class="skill"><p>REST APIs</p><div class="bar"><div style="width: 85%"></div></div></div>
+      <div class="circle-skill" style="--level: 65"><div>65%</div><span>DSA</span></div>
+      <div class="circle-skill" style="--level: 85"><div>85%</div><span>Spring Boot</span></div>
+      <div class="circle-skill" style="--level: 80"><div>80%</div><span>SQL</span></div>
+      <div class="circle-skill" style="--level: 85"><div>85%</div><span>REST API</span></div>
     </section>
+
     <section class="projects">
       <h3>My Projects</h3>
       <div class="project-grid">
         <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Railway Project">
           <h4>Railway Reservation System (LLD)</h4>
-          <div class="project-desc">Seat booking, cancellation, and charting modules built with OOP design principles and Java collections.</div>
+          <div class="project-desc">Seat booking, cancellation, and charting modules built with OOP design principles.<br><a href="#">View Code</a></div>
         </div>
         <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Library Project">
           <h4>Library Management System (LLD)</h4>
-          <div class="project-desc">A complete system with book inventory, member management, issue/return flow using classes and interfaces.</div>
+          <div class="project-desc">Book inventory, member management, issue/return flow using interfaces.<br><a href="#">View Code</a></div>
         </div>
         <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Cab Booking">
           <h4>Cab Booking App (LLD)</h4>
-          <div class="project-desc">Simulates taxi allocations between points, distance-based fares, driver status tracking using modular OOP.</div>
+          <div class="project-desc">Taxi allocations, driver status, and fare calc with modular OOP.<br><a href="#">View Code</a></div>
         </div>
         <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="MiniBank">
           <h4>MiniBank Application</h4>
-          <div class="project-desc">CRUD-based Spring Boot project with RESTful APIs to manage account details, deposit/withdrawal logic, and MariaDB backend.</div>
+          <div class="project-desc">Spring Boot CRUD project with MariaDB integration.<br><a href="#">View Code</a></div>
         </div>
       </div>
+    </section>
+
+    <section class="timeline">
+      <h3>Education & Internship</h3>
+      <div class="timeline-entry">
+        <h4>Time Chain Labs Summer Of Code - Team Leader</h4>
+        <p>May 2023 - Worked as a Team leader in TSOC'23 sponsored by Bitcoin SV.</p>
+      </div>
+      <div class="timeline-entry">
+        <h4>iTNT - Anna University</h4>
+        <p>March–April 2023 - Incubation internship with multiple startup teams.</p>
+      </div>
+    </section>
+
+    <section class="about-me">
+      <h3>About Me</h3>
+      <p>I’m an aspiring Software Developer and active contributor to open source projects. Currently an undergrad with a focus on backend and problem-solving. Always open for collaboration and building impactful tech!</p>
+      <a class="download-cv" href="#">Download CV</a>
     </section>
   </div>
 </body>
