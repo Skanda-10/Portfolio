@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import FloatingParticles from '@/components/FloatingParticles';
-import SkillCircle from '@/components/SkillCircle';
-import Timeline from '@/components/Timeline';
-import ProjectCard from '@/components/ProjectCard';
+import FloatingParticles from '../Components/FloatingParticles';
+import SkillCircle from '../Components/SkillCircle';
+import Timeline from '../Components/Timeline';
+import ProjectCard from '../Components/ProjectCard';
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '../Components/ui/button';
+import { Card, CardContent } from '../Components/ui/card';
 
 const skills = [
   { name: 'Java', level: 85 },
@@ -159,10 +159,10 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    I'm a passionate Java Backend Developer skilled in building clean, maintainable backends with Spring Boot and SQL.
+                    {`I'm a passionate Java Backend Developer skilled in building clean, maintainable backends with Spring Boot and SQL.`}
                   </p>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    I've built end-to-end systems like Railway Reservation, Cab Booking, Library Management, and Mini Bank apps, and enjoy diving into DSA challenges.
+                    {`I've built end-to-end systems like Railway Reservation, Cab Booking, Library Management, and Mini Bank apps, and enjoy diving into DSA challenges.`}
                   </p>
                   <a href="/Resume.pdf" download>
                     <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">

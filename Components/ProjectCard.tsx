@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/Components/ui/card';
 
 interface Project {
   title: string;
