@@ -123,7 +123,7 @@ export default function Home() {
             Java Backend Developer & Tech Explorer
           </p>
           <div className="flex gap-6 justify-center">
-            <a href="mailto:skanda.tls2@example.com" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:skanda.tls2@gmail.com" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500/10">
                 <Mail className="w-5 h-5 mr-2" />Contact
               </Button>
@@ -164,10 +164,13 @@ export default function Home() {
                   <p className="text-gray-300 text-lg leading-relaxed">
                     {`I've built end-to-end systems like Railway Reservation, Cab Booking, Library Management, and Mini Bank apps, and enjoy diving into DSA challenges.`}
                   </p>
-                  <a href="/Resume.pdf" download>
-                    <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                      <Download className="w-5 h-5 mr-2" />Download CV
-                    </Button>
+                  <a
+                    href="mailto:skanda.tls2@gmail.com?subject=Request for Resume&body=Hi Skanda, I came across your portfolio and would love to get your resume."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                  >
+                    Request Resume
                   </a>
 
                 </div>
