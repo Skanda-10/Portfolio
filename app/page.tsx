@@ -15,7 +15,7 @@ const skills = [
   { name: 'SQL', level: 80 },
   { name: 'Database', level: 85 },
   { name: 'DSA', level: 60 },
-  { name: 'Python', level: 70 }
+  { name: 'Python', level: 40 }
 ];
 
 const education = [
@@ -38,7 +38,7 @@ const experiences = [
     year: '2021 - 2025',
     title: 'Bachelor of Engineering (ECE)',
     company: 'Velammal Engineering College, Chennai',
-    description: 'Graduated focusing on electronics transitioning to IT. GPA: 8.2/10.'
+    description: 'Graduated focusing on electronics transitioning to IT. GPA: 8.27/10.'
   },
   {
     year: '2023',
@@ -56,32 +56,32 @@ const experiences = [
 
 const projects = [
   {
-    title: 'Railway Reservation System',
-    description: 'Java console app managing bookings, cancellations, waiting lists across AC, Non-AC, Sleeper coaches with seat-type logic.',
-    image: '/images/railway.png',
-    technologies: ['Java', 'OOP', 'Console'],
-    link: 'https://github.com/Skanda-10/Railway-Reservation'
-  },
-  {
     title: 'Mini Bank App',
     description: 'Spring Boot + MySQL CRUD app managing accounts with deposits, withdrawals, and JSON API responses.',
-    image: '"C:\FIXX\port_images\bank.png"',
+    image: '/port_images/bank.png',
     technologies: ['Java', 'Spring Boot', 'MySQL'],
-    link: 'https://github.com/Skanda-10/MiniBank'
+    link: 'https://github.com/Skanda-10/Mini_Bank'
+  },
+  {
+    title: 'Railway Reservation System',
+    description: 'Java console app managing bookings, cancellations, waiting lists across AC, Non-AC, Sleeper coaches with seat-type logic.',
+    image: '/port_images/train.png',
+    technologies: ['Java', 'OOP', 'Console'],
+    link: 'https://github.com/Skanda-10/RailwayBookingSystem-OOP'
   },
   {
     title: 'Cab Booking LLD',
     description: 'Console-based cab allocation system using OOP and LLD principles, fare calc, driver-passenger mapping.',
-    image: '/images/cab.png',
+    image: '/port_images/cab.png',
     technologies: ['Java', 'LLD', 'OOP'],
-    link: 'https://github.com/Skanda-10/CabBookingLLD'
+    link: 'https://github.com/Skanda-10/CabBookingSystem-OOPS'
   },
   {
     title: 'Library Management LLD',
     description: 'Library system simulation with user login, lending, return, penalties, built with modular OOP separation.',
-    image: '/images/library.png',
+    image: '/port_images/lib.png',
     technologies: ['Java', 'LLD', 'Console'],
-    link: 'https://github.com/Skanda-10/LibraryLLD'
+    link: 'https://github.com/Skanda-10/LibraryManagementOOP'
   }
 ];
 
@@ -123,9 +123,22 @@ export default function Home() {
             Java Backend Developer & Tech Explorer
           </p>
           <div className="flex gap-6 justify-center">
-            <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500/10"><Mail className="w-5 h-5 mr-2" />Contact</Button>
-            <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-500/10"><Github className="w-5 h-5 mr-2" />GitHub</Button>
-            <Button variant="outline" className="border-pink-500 text-pink-400 hover:bg-pink-500/10"><Linkedin className="w-5 h-5 mr-2" />LinkedIn</Button>
+            <a href="mailto:skanda.tls2@example.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500/10">
+                <Mail className="w-5 h-5 mr-2" />Contact
+              </Button>
+            </a>
+            <a href="https://github.com/Skanda-10" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-500/10">
+                <Github className="w-5 h-5 mr-2" />GitHub
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/skanda-tl-147139272/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-pink-500 text-pink-400 hover:bg-pink-500/10">
+                <Linkedin className="w-5 h-5 mr-2" />LinkedIn
+              </Button>
+            </a>
+
           </div>
         </div>
         <div className="absolute bottom-8 animate-bounce">
@@ -151,9 +164,12 @@ export default function Home() {
                   <p className="text-gray-300 text-lg leading-relaxed">
                     I've built end-to-end systems like Railway Reservation, Cab Booking, Library Management, and Mini Bank apps, and enjoy diving into DSA challenges.
                   </p>
-                  <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                    <Download className="w-5 h-5 mr-2" />Download CV
-                  </Button>
+                  <a href="/Resume.pdf" download>
+                    <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                      <Download className="w-5 h-5 mr-2" />Download CV
+                    </Button>
+                  </a>
+
                 </div>
                 <div className="relative">
                   <div className="w-64 h-64 mx-auto rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center">
