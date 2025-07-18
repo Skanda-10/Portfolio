@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ash | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #10131a;
+      color: #f5f5f5;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: url('https://cdn-icons-png.flaticon.com/512/236/236831.png') no-repeat center center/cover;
+      border: 3px solid #27b1ff;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover {
+      transform: scale(1.1);
+    }
+    h1 span {
+      color: #27b1ff;
+    }
+    .socials a {
+      margin: 0 0.5rem;
+      color: #27b1ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .skills {
+      margin-top: 3rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .circle-skill {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      position: relative;
+      background: conic-gradient(#27b1ff calc(var(--level) * 1%), #222 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #f5f5f5;
+      flex-direction: column;
+    }
+    .circle-skill span {
+      font-size: 14px;
+      margin-top: 5px;
+      text-align: center;
+    }
+    .projects {
+      margin-top: 3rem;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background-color: #1a1d26;
+      padding: 1rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    .project-desc {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .timeline {
+      position: relative;
+      margin: 4rem 0;
+      padding-left: 2rem;
+      border-left: 2px solid #555;
+    }
+    .timeline-entry {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #27b1ff;
+    }
+    .timeline-entry h4 {
+      margin: 0;
+      color: #27b1ff;
+    }
+    .about-me {
+      background: #1a1d26;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .about-me p {
+      line-height: 1.6;
+    }
+    .download-cv {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #27b1ff;
+      border-radius: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="intro">
+        <div class="profile-pic"></div>
+        <div class="intro-text">
+          <h1>Hi, I'm <span>Skanda</span></h1>
+          <h2>Software Developer & Problem Solver</h2>
+          <p>I’m passionate about backend & algorithms. I build APIs, optimize performance, and craft solutions with clean code.</p>
+          <div class="socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="mailto:your@email.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="skills">
+      <div class="circle-skill" style="--level: 65"><div>65%</div><span>DSA</span></div>
+      <div class="circle-skill" style="--level: 85"><div>85%</div><span>Spring Boot</span></div>
+      <div class="circle-skill" style="--level: 80"><div>80%</div><span>SQL</span></div>
+      <div class="circle-skill" style="--level: 85"><div>85%</div><span>REST API</span></div>
+    </section>
+
+    <section class="projects">
+      <h3>My Projects</h3>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Railway Project">
+          <h4>Railway Reservation System (LLD)</h4>
+          <div class="project-desc">Seat booking, cancellation, and charting modules built with OOP design principles.<br><a href="#">View Code</a></div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Library Project">
+          <h4>Library Management System (LLD)</h4>
+          <div class="project-desc">Book inventory, member management, issue/return flow using interfaces.<br><a href="#">View Code</a></div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Cab Booking">
+          <h4>Cab Booking App (LLD)</h4>
+          <div class="project-desc">Taxi allocations, driver status, and fare calc with modular OOP.<br><a href="#">View Code</a></div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="MiniBank">
+          <h4>MiniBank Application</h4>
+          <div class="project-desc">Spring Boot CRUD project with MariaDB integration.<br><a href="#">View Code</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <h3>Education & Internship</h3>
+      <div class="timeline-entry">
+        <h4>Time Chain Labs Summer Of Code - Team Leader</h4>
+        <p>May 2023 - Worked as a Team leader in TSOC'23 sponsored by Bitcoin SV.</p>
+      </div>
+      <div class="timeline-entry">
+        <h4>iTNT - Anna University</h4>
+        <p>March–April 2023 - Incubation internship with multiple startup teams.</p>
+      </div>
+    </section>
+
+    <section class="about-me">
+      <h3>About Me</h3>
+      <p>I’m an aspiring Software Developer and active contributor to open source projects. Currently an undergrad with a focus on backend and problem-solving. Always open for collaboration and building impactful tech!</p>
+      <a class="download-cv" href="#">Download CV</a>
+    </section>
+  </div>
+</body>
+</html>
