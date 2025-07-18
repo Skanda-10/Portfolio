@@ -5,7 +5,7 @@ import FloatingParticles from '../Components/FloatingParticles';
 import SkillCircle from '../Components/SkillCircle';
 import Timeline from '../Components/Timeline';
 import ProjectCard from '../Components/ProjectCard';
-import { Download, Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '../Components/ui/button';
 import { Card, CardContent } from '../Components/ui/card';
 
