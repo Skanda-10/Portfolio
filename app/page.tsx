@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import FloatingParticles from '../components/FloatingParticles';
-import SkillCircle from '../components/SkillCircle';
-import Timeline from '../components/Timeline';
-import ProjectCard from '../components/ProjectCard';
+import FloatingParticles from '../Components/FloatingParticles';
+import SkillCircle from '../Components/SkillCircle';
+import Timeline from '../Components/Timeline';
+import ProjectCard from '../Components/ProjectCard';
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
+import { Button } from '../Components/ui/button';
+import { Card, CardContent } from '../Components/ui/card';
 
 const skills = [
   { name: 'Java', level: 85 },
