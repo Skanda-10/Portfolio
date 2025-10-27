@@ -55,13 +55,13 @@ const experiences = [
 ];
 
 const projects = [
-  {
-    title: 'Mini Bank App',
-    description: 'Spring Boot + MySQL CRUD app managing accounts with deposits, withdrawals, and JSON API responses.',
-    image: '/port_images/bank.png',
-    technologies: ['Java', 'Spring Boot', 'MySQL'],
-    link: 'https://github.com/Skanda-10/Mini_Bank'
-  },
+    {
+      title: 'MiniBank Microservice-Based Banking System',
+      description: 'A scalable, event-driven banking platform using Spring Boot microservices (Account, Transaction, Ledger). Features RESTful CRUD APIs, service discovery, and uses RabbitMQ for fault-tolerant, asynchronous ledger logging.',
+      image: '/port_images/bank.png',
+      technologies: ['Java', 'Spring Boot', 'Microservices', 'RabbitMQ', 'MySQL'],
+      link: 'https://github.com/Skanda-10/Mini_Bank2'
+    },
   {
     title: 'Railway Reservation System',
     description: 'Java console app managing bookings, cancellations, waiting lists across AC, Non-AC, Sleeper coaches with seat-type logic.',
@@ -82,7 +82,14 @@ const projects = [
     image: '/port_images/lib.png',
     technologies: ['Java', 'LLD', 'Console'],
     link: 'https://github.com/Skanda-10/LibraryManagementOOP'
-  }
+  },
+  {
+      title: 'Mini Bank App',
+      description: 'Spring Boot + MySQL CRUD app managing accounts with deposits, withdrawals, and JSON API responses.',
+      image: '/port_images/bank.png',
+      technologies: ['Java', 'Spring Boot', 'MySQL'],
+      link: 'https://github.com/Skanda-10/Mini_Bank'
+    }
 ];
 
 export default function Home() {
